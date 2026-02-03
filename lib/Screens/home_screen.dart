@@ -21,19 +21,19 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(AppColors.primaryColor),
+      backgroundColor: const Color(AppColors.primaryColor),
       appBar: AppBar(
         elevation: 3,
         shadowColor: Colors.black,
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'BMI Calculator',
           style: TextStyle(
             color: Color(AppColors.white),
             fontWeight: FontWeight.bold,
           ),
         ),
-        backgroundColor: Color(AppColors.primaryColor),
+        backgroundColor: const Color(AppColors.primaryColor),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
@@ -105,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       },
                     ),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Expanded(
                     child: AgeWeightCard(
                       text: "Age",

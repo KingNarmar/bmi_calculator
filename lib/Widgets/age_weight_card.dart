@@ -16,7 +16,7 @@ class AgeWeightCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Color(AppColors.cardColor),
         borderRadius: BorderRadius.all(Radius.circular(10)),
       ),
@@ -25,11 +25,11 @@ class AgeWeightCard extends StatelessWidget {
         children: [
           Text(
             text,
-            style: TextStyle(fontSize: 20, color: Color(AppColors.white)),
+            style: const TextStyle(fontSize: 20, color: Color(AppColors.white)),
           ),
           Text(
             "$number",
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 50,
               fontWeight: FontWeight.bold,
               color: Color(AppColors.white),
@@ -40,14 +40,14 @@ class AgeWeightCard extends StatelessWidget {
             children: [
               FloatingActionButton(
                 onPressed: onRemove,
-                backgroundColor: Color(AppColors.activeColor),
-                child: Icon(Icons.remove, color: Color(AppColors.white)),
+                backgroundColor: const Color(AppColors.activeColor),
+                child: const Icon(Icons.remove, color: Color(AppColors.white)),
               ),
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
               FloatingActionButton(
                 onPressed: onAdd,
-                backgroundColor: Color(AppColors.activeColor),
-                child: Icon(Icons.add, color: Color(AppColors.white)),
+                backgroundColor: const Color(AppColors.activeColor),
+                child: const Icon(Icons.add, color: Color(AppColors.white)),
               ),
             ],
           ),

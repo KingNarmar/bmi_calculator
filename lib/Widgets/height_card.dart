@@ -8,14 +8,14 @@ class HeightCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Color(AppColors.cardColor),
         borderRadius: BorderRadius.all(Radius.circular(10)),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             "Height",
             style: TextStyle(fontSize: 20, color: Color(AppColors.white)),
           ),
@@ -26,13 +26,13 @@ class HeightCard extends StatelessWidget {
             children: [
               Text(
                 "$height",
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 50,
                   fontWeight: FontWeight.bold,
                   color: Color(AppColors.white),
                 ),
               ),
-              Text(
+              const Text(
                 "cm",
                 style: TextStyle(fontSize: 20, color: Color(AppColors.white)),
               ),
@@ -43,8 +43,8 @@ class HeightCard extends StatelessWidget {
             min: 0,
             max: 220,
             onChanged: onChanged,
-            activeColor: Color(AppColors.activeColor),
-            inactiveColor: Color(AppColors.white),
+            activeColor: const Color(AppColors.activeColor),
+            inactiveColor: const Color(AppColors.white),
           ),
         ],
       ),

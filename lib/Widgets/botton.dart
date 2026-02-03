@@ -10,10 +10,12 @@ class Botton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ButtonStyle(
-        backgroundColor: WidgetStateProperty.all(Color(AppColors.buttonColor)),
-        minimumSize: WidgetStateProperty.all(Size(double.infinity, 50)),
+        backgroundColor: WidgetStateProperty.all(
+          const Color(AppColors.buttonColor),
+        ),
+        minimumSize: WidgetStateProperty.all(const Size(double.infinity, 50)),
         shape: WidgetStateProperty.all(
-          RoundedRectangleBorder(
+          const RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
               bottomRight: Radius.circular(10),
               bottomLeft: Radius.circular(10),
@@ -23,7 +25,7 @@ class Botton extends StatelessWidget {
       ),
       child: Text(
         text,
-        style: TextStyle(color: Color(AppColors.white), fontSize: 30),
+        style: const TextStyle(color: Color(AppColors.white), fontSize: 30),
       ),
     );
   }
