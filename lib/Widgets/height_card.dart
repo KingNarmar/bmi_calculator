@@ -40,7 +40,7 @@ class HeightCard extends StatelessWidget {
           ),
           Slider(
             value: height.toDouble(),
-            min: 0,
+            min: 120,
             max: 220,
             onChanged: onChanged,
             activeColor: const Color(AppColors.activeColor),

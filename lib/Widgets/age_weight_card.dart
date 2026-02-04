@@ -39,12 +39,14 @@ class AgeWeightCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               FloatingActionButton(
+                heroTag: null,
                 onPressed: onRemove,
                 backgroundColor: const Color(AppColors.activeColor),
                 child: const Icon(Icons.remove, color: Color(AppColors.white)),
               ),
               const SizedBox(width: 10),
               FloatingActionButton(
+                heroTag: null,
                 onPressed: onAdd,
                 backgroundColor: const Color(AppColors.activeColor),
                 child: const Icon(Icons.add, color: Color(AppColors.white)),

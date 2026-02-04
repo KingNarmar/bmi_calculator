@@ -1,10 +1,28 @@
 import 'package:bmi_calculator/Widgets/botton.dart';
+import 'package:bmi_calculator/Widgets/result_card.dart';
 import 'package:bmi_calculator/helpers/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen({super.key, required this.bmi});
   final double bmi;
+
+  String get firstText {
+    if (bmi < 18.5) return "Under Weight";
+    if (bmi <= 24.9) return "Healthy Weight";
+    if (bmi <= 29.9) return "Overweight";
+    if (bmi <= 39.9) return "Obesity";
+    return "Severe Obesity";
+  }
+
+  String get secondText {
+    if (bmi < 18.5)return "You are under the normal weight range. Try to eat balanced meals and increase your calorie intake gradually to reach a healthy weight.";
+    if (bmi <= 24.9) return "You have a healthy body weight. Keep maintaining your balanced diet and active lifestyle to stay fit and strong.";
+    if (bmi <= 29.9) return "You are slightly above the healthy weight range. Consider regular exercise and a balanced diet to improve your overall health.";
+    if (bmi <= 39.9) return "Your weight is in the obesity range. Adopting a healthier diet and increasing physical activity can greatly improve your health.";
+    return "Your weight is in the severe obesity range. It is strongly recommended to seek professional medical advice for a proper health plan.";
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,43 +57,10 @@ class ResultScreen extends StatelessWidget {
             ),
             const SizedBox(height: 25),
             Expanded(
-              child: Container(
-                width: double.infinity,
-                decoration: const BoxDecoration(
-                  color: Color(AppColors.cardColor),
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                ),
-                child: Column(
-                  children: [
-                    const SizedBox(height: 85),
-                    const Text(
-                      "Normal",
-                      style: TextStyle(
-                        color: Color(AppColors.green),
-                        fontSize: 20,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                    const SizedBox(height: 33),
-                    Text(
-                      bmi.toStringAsFixed(1),
-                      style: const TextStyle(
-                        color: Color(AppColors.white),
-                        fontSize: 64,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const SizedBox(height: 60),
-                    const Text(
-                      "You Have a Normal Body Weight,Good Job.",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color: Color(AppColors.white),
-                      ),
-                    ),
-                  ],
-                ),
+              child: ResultCard(
+                bmi: bmi,
+                resultDiscripe: secondText,
+                resultText: firstText,
               ),
             ),
             const SizedBox(height: 49),
