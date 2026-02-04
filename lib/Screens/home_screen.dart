@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/Screens/result_screen.dart';
 import 'package:bmi_calculator/Widgets/age_weight_card.dart';
 import 'package:bmi_calculator/Widgets/botton.dart';
 import 'package:bmi_calculator/Widgets/gender_card.dart';
@@ -16,6 +17,7 @@ bool isMaleSelected = true;
 int height = 180;
 int weight = 60;
 int age = 20;
+double bmi = 0;
 
 class _HomeScreenState extends State<HomeScreen> {
   @override
@@ -127,7 +129,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            Botton(text: "Calculate", onPressed: () {}),
+            Botton(
+              text: "Calculate",
+              onPressed: () {
+                setState(() {
+                  bmi = weight / ((height / 100) * (height / 100));
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ResultScreen(bmi: bmi),
+                    ),
+                  );
+                });
+              },
+            ),
           ],
         ),
       ),
