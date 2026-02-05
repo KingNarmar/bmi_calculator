@@ -22,13 +22,9 @@ The application calculates the Body Mass Index (BMI) and displays the health cat
 
 ## 📱 Screenshots
 
-### Home Screen
+### Home Screen ### Result Screen
 
-<img src="Screen Shoots/Home Screen.png" width="300"/>
-
-### Result Screen
-
-<img src="Screen Shoots/Result Screen.png" width="300"/>
+<img src="Screen Shoots/Home Screen.png" width="300"/> <img src="Screen Shoots/Result Screen.png" width="300"/>
 
 ---
 
@@ -52,3 +48,18 @@ lib/
 │
 └── main.dart
 ```
+
+---
+
+## 📘 Topic Research – StatefulWidget Lifecycle
+
+As part of the same task, a detailed topic research was prepared explaining the **StatefulWidget lifecycle in Flutter**, including:
+
+- Widget and State concepts
+- Lifecycle methods (`initState`, `build`, `dispose`, etc.)
+- Execution order
+- Best practices and common pitfalls
+- Practical code example
+
+🔗 **Read the full topic research here:**  
+👉 https://www.notion.so/StatefulWidget-Lifecycle-in-Flutter-Topic-Research-2fed451e677b809bbedff034298ca19f?source=copy_link
